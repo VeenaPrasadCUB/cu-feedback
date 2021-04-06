@@ -9,9 +9,9 @@ app = Flask(__name__,
 def index():
     return render_template("index.html")
 
-@app.route("/submit", methods = ['POST'])
-def submit():
-    return "<h1>Welcome to our webpage," + request.form['fullName']  + "</h1>" 
+@app.route("/kibana")
+def index():
+    return render_template("kibana.html")
 
 if __name__ == "__main__":
     app.run()
