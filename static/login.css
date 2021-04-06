@@ -4,6 +4,11 @@ body.index {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+
+
+body.kibana {
+
+}
 #customBtn {
   display: inline-block;
   background: white;
@@ -26,6 +31,15 @@ span.label {
   font-size: 20px;
 }
 
+.kibana #gSignInWrapper{
+   position:absolute;
+   top:-74px;
+   right:15px;
+  }
+
+.signout{
+  display:none;
+}
 #title{
   text-align: center;
   color: darkblue;
