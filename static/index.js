@@ -13,7 +13,7 @@ var username='';
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
-    window.location.href = 'kibana.html';
+    window.location.href = 'templates/kibana.html';
   }
 
   function signOut() {
