@@ -4,17 +4,21 @@
   <link rel="stylesheet" href="../static/login.css">
   <script src="https://apis.google.com/js/api:client.js"></script>
   <script src="../static/index.js"></script>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="95669931471-nr74g9q5uksfl7h2l4ikc3d3mkrnd4qh.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
-  <body>
+<body class="index">
   <div id="title">
     <h1> CU FEEDBACK</h1>
   </div>
+
   <div id="gSignInWrapper">
     <span class="label">LOGIN: </span>
-    <div id="customBtn" class="customGPlusSignIn"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
   </div>
-  <div id="name"></div>
-  <script>startApp();</script>
+
 </body>
-</html>
+</html> 

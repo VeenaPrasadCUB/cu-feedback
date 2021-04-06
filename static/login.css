@@ -1,4 +1,4 @@
-body {
+body.index {
   background-image: url('https://techcrunch.com/wp-content/uploads/2020/01/GettyImages-1167399542.jpg?w=730&crop=1');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,13 +25,7 @@ span.label {
   font-weight: bolder;
   font-size: 20px;
 }
-#customBtn {
-  background: url('btn_google_signin_light_focus_web.png') transparent 50% no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  height: 42px;
-  width: default;
-}
+
 #title{
   text-align: center;
   color: darkblue;
