@@ -1,12 +1,12 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="../static/login.css">
   <script src="https://apis.google.com/js/api:client.js"></script>
-  <script src="../static/index.js"></script>
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="95669931471-nr74g9q5uksfl7h2l4ikc3d3mkrnd4qh.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <link rel="stylesheet" href="../static/login.css">
+  <script src="../static/index.js"></script>
 </head>
 
 <body class="kibana">
@@ -19,6 +19,10 @@
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <a class="signout" href="#" onclick="signOut();">Sign out</a>
   </div>
+
+  <div id="kibana_dashboard"> 
+	<iframe src="http://localhost:5601/app/dashboards#/create?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!(),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'',viewMode:edit)" height="600" width="1200"></iframe>
+</div>
 
 </body>
 
