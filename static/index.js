@@ -11,14 +11,20 @@ function onSignIn(googleUser) {
   console.log("Email: " + profile.getEmail());*/
 
   //If the user is logged in
-  if(document.getElementById('logged-name') != null){
-    document.getElementById('logged-name').innerHTML = "Hello, " + profile.getName();
+  var x = document.getElementById('myBtn');
+  if(x != null){
+    x.textContent = "Hello, " + profile.getName();
+    var t = document.createElement("SPAN");
+    t.className = "caret";
+    x.appendChild(t);
     document.getElementsByClassName('abcRioButton')[0].style.display = "none";
     document.getElementsByClassName('signout')[0].style.display =  "block";
   }
   
   if(!window.location.href.includes('kibana') && id_token != null)
     window.location.href = 'kibana';
+  if(window.location.href.includes('kibana') && id_token == null)
+    window.location.href = 'index';
 }
 
 function signOut() {

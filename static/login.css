@@ -49,3 +49,10 @@ span.label {
   width: 21%;
   padding: 100px;
 }
+.dropdown, .dropdown open {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 21px;
+    margin-right: 30px;
+}

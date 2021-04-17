@@ -7,6 +7,10 @@
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <link rel="stylesheet" href="../static/login.css">
   <script src="../static/index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body class="kibana">
@@ -14,17 +18,24 @@
     <h1> CU FEEDBACK</h1>
   </div>
 
-  <div id="gSignInWrapper">
+  <!-- <div id="gSignInWrapper">
     <span id="logged-name"></span>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <a class="signout" href="#" onclick="signOut();">Sign out</a>
+  </div> -->
+
+   <div class="dropdown" style="position:absolute">
+   	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="display: none;"></div>
+	  <button id="myBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"></button>
+	  <ul class="dropdown-menu">
+	    <li><a href="#">About</a></li>
+	    <li><a href="#" onclick="signOut();">SignOut</a></li>
+	  </ul>
   </div>
 
   <div id="kibana_dashboard"> 
 	<iframe src="http://localhost:5601/app/dashboards#/create?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!(),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'',viewMode:edit)" height="600" width="1200"></iframe>
 </div>
-
-</body>
 
 </body>
 </html>
