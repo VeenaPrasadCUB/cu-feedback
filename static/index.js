@@ -23,9 +23,9 @@ function onSignIn(googleUser) {
   }
 
   
-  if(!window.location.href.includes('kibana') && typeof(window.localStorage.token) == 'undefined')
+  if(!window.location.href.includes('kibana') && typeof(window.localStorage.token) != 'undefined')
     window.location.href = 'kibana';
-  if(window.location.href.includes('kibana') && typeof(window.localStorage.token) == 'undefined')
+  else if(window.location.href.includes('kibana') && typeof(window.localStorage.token) == 'undefined')
     window.location.href = 'index';
 }
 
