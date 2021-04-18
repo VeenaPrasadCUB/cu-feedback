@@ -3,6 +3,7 @@ var googleUser = {};
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   var id_token = googleUser.getAuthResponse().id_token;
+  window.localStorage.token = id_token;
   /*console.log("ID: " + profile.getId()); 
   console.log('Full Name: ' + profile.getName());
   console.log('Given Name: ' + profile.getGivenName());
@@ -20,12 +21,15 @@ function onSignIn(googleUser) {
     document.getElementsByClassName('abcRioButton')[0].style.display = "none";
     document.getElementsByClassName('signout')[0].style.display =  "block";
   }
+
   
-  if(!window.location.href.includes('kibana') && id_token != null)
+  if(!window.location.href.includes('kibana') && window.localStorage.token != null)
     window.location.href = 'kibana';
-  if(window.location.href.includes('kibana') && id_token == null)
+  if(window.location.href.includes('kibana') && window.localStorage.token == null)
     window.location.href = 'index';
 }
+
+
 
 function signOut() {
   var auth2 = gapi.auth2.getAuthInstance();
@@ -35,6 +39,7 @@ function signOut() {
     document.getElementsByClassName('abcRioButton')[0].style.display =  "block";
     document.getElementsByClassName('signout')[0].style.display =  "none";*/
     window.location.href = '/';
+    window.localStorage.clear();
   });
   
 }
