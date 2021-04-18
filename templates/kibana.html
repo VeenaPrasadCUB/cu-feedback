@@ -31,11 +31,13 @@
 	    <li><a href="#">About</a></li>
 	    <li><a href="#" onclick="signOut();">SignOut</a></li>
 	  </ul>
+
+       <div id="kibana_dashboard">
+           <iframe src="http://localhost:5601/app/dashboards#/create?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!(),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'',viewMode:edit)" height="600" width="1200"></iframe>
+       </div>
   </div>
 
-  <div id="kibana_dashboard"> 
-	<iframe src="http://localhost:5601/app/dashboards#/create?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!(),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'',viewMode:edit)" height="600" width="1200"></iframe>
-</div>
+
 
 </body>
 </html>

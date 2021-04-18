@@ -24,7 +24,7 @@ function onSignIn(googleUser) {
 
   
   if(!window.location.href.includes('kibana') && typeof(window.localStorage.token) != 'undefined')
-    window.location.href = 'kibana';
+    window.location.href = '/kibana?id_token='+window.localStorage.token;
   else if(window.location.href.includes('kibana') && typeof(window.localStorage.token) == 'undefined')
     window.location.href = 'index';
 }
