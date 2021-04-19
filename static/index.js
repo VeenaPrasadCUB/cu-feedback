@@ -4,6 +4,7 @@ function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   var id_token = googleUser.getAuthResponse().id_token;
   window.localStorage.token = id_token;
+  window.localStorage.name = profile.getName();
   /*console.log("ID: " + profile.getId()); 
   console.log('Full Name: ' + profile.getName());
   console.log('Given Name: ' + profile.getGivenName());
@@ -13,28 +14,31 @@ function onSignIn(googleUser) {
 
   //If the user is logged in
   var x = document.getElementById('myBtn');
+  var y = document.getElementsByClassName("dropdown");
+  var z = document.getElementsByClassName('g-signin2');
   if(x != null){
     x.textContent = "Hello, " + profile.getName();
-    /*var t = document.createElement("SPAN");
-    t.className = "caret";
-    x.appendChild(t);*/
-    document.getElementsByClassName('abcRioButton')[0].style.display = "none";
-    document.getElementsByClassName('signout')[0].style.display =  "block";
+    y[0].style.display = "block";
+    console.log(z[1]);
+    z[1].style.display = "none";
   }
   
-   if(!window.location.href.includes('kibana') && typeof(window.localStorage.token) != 'undefined')
-    window.location.href = '/kibana?id_token='+window.localStorage.token;
-  else if(window.location.href.includes('kibana') && typeof(window.localStorage.token) == 'undefined')
-    window.location.href = 'index';
+  if(window.location.href.includes('kibana')){
+    if(typeof(window.localStorage.token) != 'undefined')
+      window.location.href = '/kibana?id_token='+window.localStorage.token;
+    else if(typeof(window.localStorage.token) == 'undefined')
+      window.location.href = 'index';
+  } 
 }
 
 function signOut() {
   var auth2 = gapi.auth2.getAuthInstance();
-
+  var y = document.getElementsByClassName("dropdown");
+  
   auth2.signOut().then(function () {
-    /*document.getElementById('logged-name').innerHTML = "Please Sign in";
     document.getElementsByClassName('abcRioButton')[0].style.display =  "block";
-    document.getElementsByClassName('signout')[0].style.display =  "none";*/
+    /*document.getElementsByClassName('signout')[0].style.display =  "none";*/
+    y[0].style.display = "none";
     window.location.href = '/';
     window.localStorage.clear();
   });

@@ -14,6 +14,7 @@ app.config.from_mapping(
 
 @app.route("/")
 def index():
+	# name = request.args.get('name',None)
     return render_template("index.html")
 
 @app.route("/kibana", methods=['GET'])
