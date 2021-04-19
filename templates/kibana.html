@@ -11,11 +11,49 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>CU Feedback</title>
+  <link rel='icon' href='./static/favicon.ico' type='image/x-icon'/>
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 </head>
 
 <body class="kibana">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.html">
+    <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/3573977452/755113100761987580ae7df9f11ab82a_400x400.png" alt="" width="40" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <a class="nav-link" href="/" style="font-size: 15px; color: #fff">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="kibana" style="font-size: 15px; color: #fff">Dashboard </a>
+      </li>
+    </ul>
+    <div class="dropdown" style="position:absolute">
+   	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="display: none;"></div>
+	  <button id="myBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"></button>
+	  <ul class="dropdown-menu">
+	    <li><a href="#" onclick="signOut();">SignOut</a></li>
+	  </ul>
+  	</div>
+    <!-- <div id="gSignInWrapper">
+      
+      <a class="signout" href="#" onclick="signOut();">Sign out</a>
+    </div> -->
+    </div>
+  </nav>
+
   <div id="title">
-    <h1> CU FEEDBACK</h1>
+    <h1 style="font-size: 40px; font-weight: bold;"> CU FEEDBACK</h1>
   </div>
 
   <!-- <div id="gSignInWrapper">
@@ -24,20 +62,9 @@
     <a class="signout" href="#" onclick="signOut();">Sign out</a>
   </div> -->
 
-   <div class="dropdown" style="position:absolute">
-   	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="display: none;"></div>
-	  <button id="myBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"></button>
-	  <ul class="dropdown-menu">
-	    <li><a href="#">About</a></li>
-	    <li><a href="#" onclick="signOut();">SignOut</a></li>
-	  </ul>
-
-       <div id="kibana_dashboard">
-           <iframe src="http://localhost:5601/app/dashboards#/create?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!(),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'',viewMode:edit)" height="600" width="1200"></iframe>
+  <div id="kibana_dashboard">	
+           <iframe src="http://localhost:5601/app/dashboards#/create?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),panels:!(),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'',viewMode:edit)" height="600" width="1200"></iframe>	
        </div>
-  </div>
-
-
 
 </body>
 </html>
