@@ -11,26 +11,62 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>CU Feedback</title>
+  <link rel='icon' href='./static/favicon.ico' type='image/x-icon'/>
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 </head>
 
 <body class="index">
-  <div id="title">
-    <h1> CU FEEDBACK</h1>
-  </div>
-
-  <div id="gSignInWrapper">
-    <span class="label">LOGIN: </span>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <a class="signout" href="#" onclick="signOut();">Sign out</a>
-  </div>
-
-   <div class="dropdown" style="position:absolute">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Hello, Please Login 
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">About</a></li>
-      <li><a href="#" onclick="signOut();">SignOut</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.html">
+    <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/3573977452/755113100761987580ae7df9f11ab82a_400x400.png" alt="" width="40" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <a class="nav-link" href="/" style="font-size: 15px; color: #fff">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="kibana" style="font-size: 15px; color: #fff">Dashboard </a>
+      </li>
     </ul>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <!-- <div id="gSignInWrapper">
+      
+      <a class="signout" href="#" onclick="signOut();">Sign out</a>
+    </div> -->
+    </div>
+  </nav>
+
+  <div id="title">
+    <h1 style="font-size: 40px; font-weight: bold;"> CU FEEDBACK</h1>
+  </div>
+
+  <div class="container">
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-4">
+        <img class="rounded img-fluid" src="./static/cubackground.jpg" alt="CU Boulder Football Helmet">
+      </div>
+      <div class="col-8">
+        <!-- <div class="jumbotron">
+          <h1 class="display-4">Welcome to CU Boulder's TA Feedback Page!</h1>
+          <p class="lead">If you are interested in knowing your feedback about teaching and improvising your teaching methods, then you've come to the right place.
+                  Here you'll find the dashboard on the students' responses which will help you to concentrate on the topic that requires more attention. Dashboard serve you a good way to understand what your students' thought process is.</p>
+          
+        </div>
+      </div> -->
+    </div>
   </div>
 </body>
 </html> 
