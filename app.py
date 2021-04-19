@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
 import db
 
@@ -16,15 +16,15 @@ app.config.from_mapping(
 def index():
     return render_template("index.html")
 
-
-@app.route("/kibana")
+@app.route("/kibana", methods=['GET'])
 def kibana():
-    return render_template("kibana.html")
+    id_token = request.args.get('id_token',None)
+    if id_token:
+        return render_template("kibana.html")
+    else:
+       return render_template("index.html")
 
 
 if __name__ == "__main__":
     db.init_app(app)
     app.run()
-
-
-
