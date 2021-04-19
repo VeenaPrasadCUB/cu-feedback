@@ -4,7 +4,6 @@ function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   var id_token = googleUser.getAuthResponse().id_token;
   window.localStorage.token = id_token;
-  window.localStorage.name = profile.getName();
   /*console.log("ID: " + profile.getId()); 
   console.log('Full Name: ' + profile.getName());
   console.log('Given Name: ' + profile.getGivenName());
@@ -19,7 +18,6 @@ function onSignIn(googleUser) {
   if(x != null){
     x.textContent = "Hello, " + profile.getName();
     y[0].style.display = "block";
-    console.log(z[1]);
     z[1].style.display = "none";
   }
   
@@ -34,10 +32,10 @@ function onSignIn(googleUser) {
 function signOut() {
   var auth2 = gapi.auth2.getAuthInstance();
   var y = document.getElementsByClassName("dropdown");
+  var z = document.getElementsByClassName('g-signin2');
   
   auth2.signOut().then(function () {
-    document.getElementsByClassName('abcRioButton')[0].style.display =  "block";
-    /*document.getElementsByClassName('signout')[0].style.display =  "none";*/
+    z[0].style.display = "block";
     y[0].style.display = "none";
     window.location.href = '/';
     window.localStorage.clear();
