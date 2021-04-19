@@ -36,7 +36,7 @@ CREATE TABLE survey (
     ta_cct_index TEXT PRIMARY KEY NOT NULL,
     ta_cuid TEXT NOT NULL,
     cct TEXT NOT NULL,
-    index INTEGER NOT NULL,
+    semester_index INTEGER NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
     topic_1 TEXT,

@@ -1,15 +1,10 @@
 from flask import Flask, render_template, request
-import os
-import db
-
+from DataPersistence import db
 
 app = Flask(__name__,
             static_folder='static',
             template_folder='templates')
 
-app.config.from_mapping(
-    DATABASE=os.path.join(app.instance_path, 'data')
-)
 
 
 @app.route("/")
@@ -26,5 +21,7 @@ def kibana():
 
 
 if __name__ == "__main__":
-    db.init_app(app)
+    conn = db.get_db()
+    db.test_connection(conn)
     app.run()
+
