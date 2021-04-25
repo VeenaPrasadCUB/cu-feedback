@@ -2,6 +2,8 @@ import nltk
 import pandas as pd
 from collections import Counter
 from nltk.sentiment import SentimentIntensityAnalyzer
+from elasticsearch import Elasticsearch
+
 sia = SentimentIntensityAnalyzer()
 
 def compute_sentiment(review_text: str):
@@ -59,9 +61,7 @@ def main():
   print('linked list scores {}'.format(linked_list_scores_aggregate))
   print('TA Scores {}' .format(ta_scores))
   print('Polarity Dictionary {}' .format(polarity_dictionary))
-
-from elasticsearch import Elasticsearch
-
+  return array_scores_aggregate, pointer_scores_aggregate, linked_list_scores_aggregate, ta_scores, polarity_dictionary
 
 def get_es_credentials():
   return {
@@ -72,13 +72,13 @@ def get_es_credentials():
 
 ELASTIC_SETTINGS = get_es_credentials()
 
-def es():
+def es(array_scores_aggregate, pointer_scores_aggregate, linked_list_scores_aggregate, ta_scores, polarity_dictionary):
   es = Elasticsearch(
       cloud_id=ELASTIC_SETTINGS["cloud_id"],
       http_auth=(ELASTIC_SETTINGS["user"], ELASTIC_SETTINGS["password"]),
   )
-
-  ta_scores = {"ta_max_rating" : ta_max_rating, "ta_min_rating" :ta_min_rating, "ta_average_rating" : ta_average_rating}
+  
+  #ta_scores = {"ta_max_rating" : ta_max_rating, "ta_min_rating" :ta_min_rating, "ta_average_rating" : ta_average_rating}
   es.index(index='sw', doc_type='people', id=1, body= array_scores_aggregate)
   es.index(index='sw', doc_type='people', id=2, body= pointer_scores_aggregate)
   es.index(index='sw', doc_type='people', id=3, body= linked_list_scores_aggregate)
@@ -98,6 +98,10 @@ def es():
   print(ta_scores_1)
   print(polarity_dictionary_1)
 
-main()
+array_scores_aggregate, pointer_scores_aggregate, linked_list_scores_aggregate, ta_scores, polarity_dictionary = main()
 print()
-es()
+array_scores_aggregate = { "array_"+str(k): v for k, v in array_scores_aggregate.items() }
+pointer_scores_aggregate = { "pointer_"+str(k): v for k, v in pointer_scores_aggregate.items() }
+linked_list_scores_aggregate = { "linkedlist_"+str(k): v for k, v in linked_list_scores_aggregate.items() }
+
+es(array_scores_aggregate, pointer_scores_aggregate, linked_list_scores_aggregate, ta_scores, polarity_dictionary)
