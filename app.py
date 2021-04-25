@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from DataPersistence import db
 
 app = Flask(__name__,
             static_folder='static',
@@ -21,7 +20,5 @@ def kibana():
 
 
 if __name__ == "__main__":
-    conn = db.get_db()
-    db.test_connection(conn)
     app.run()
 

@@ -2,7 +2,7 @@ import sqlite3
 
 
 def get_db():
-    conn = sqlite3.connect('raw_data.db')
+    conn = sqlite3.connect('../DataPersistence/raw_data.db')
     return conn
 
 
