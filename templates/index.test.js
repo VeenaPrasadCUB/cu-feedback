@@ -26,7 +26,7 @@ describe('index.html', () => {
       expect(container.querySelectorAll('gSignInWrapper')).not.toBeNull()
   })
 
-    it('renders a login element', () => {
-       expect(getByText(container, 'LOGIN:')).toBeInTheDocument()
+    it('renders the nav bar element', () => {
+       expect(getByText(container, 'Dashboard')).toBeInTheDocument()
   })
 })
