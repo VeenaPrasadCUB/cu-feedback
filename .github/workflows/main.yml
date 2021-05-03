@@ -16,4 +16,4 @@ jobs:
 
     steps:
       - name: Verify 3.5
-        run: python test/test_example.py 3.5
+        run: python ./test/test_example.py 3.5
