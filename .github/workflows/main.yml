@@ -15,5 +15,9 @@ jobs:
         operating-system: [ubuntu-latest, windows-latest]
 
     steps:
+      - name: Run with setup-python 3.5
+        uses: ./
+        with:
+          python-version: 3.5
       - name: Verify 3.5
-        run: python ./test/test_example.py 3.5
+        run: python test/test_example.py 3.5
