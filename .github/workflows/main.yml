@@ -24,3 +24,8 @@ jobs:
 
       - name: Verify 3.7
         run: python test/test_example.py
+        
+      - name: Run unit tests
+        run: |
+          npm install
+          npm test
