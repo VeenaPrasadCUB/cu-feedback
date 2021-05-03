@@ -23,11 +23,12 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Verify 3.7
-        run: | 
-        python test/test_example.py
-        python test/test_data_analysis.py
+        run: python test/test_example.py
+      - name: Verify 3.7
+        run: python test/test_data_analysis.py
         
       - name: Run unit tests
         run: |
           npm install
           npm test
+      
