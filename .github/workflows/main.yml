@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Verify 3.7
-        run: python test/test_example.py
+        run: python test/*.py
         
       - name: Run unit tests
         run: |
