@@ -24,8 +24,8 @@ jobs:
 
       - name: Verify 3.7
         run: python test/test_example.py
-      - name: Verify 3.7
-        run: python test/test_data_analysis.py
+      - name: Verify DataAnalysisTests
+        run: python DataAnalysis/test_data_analysis.py
         
       - name: Run unit tests
         run: |
