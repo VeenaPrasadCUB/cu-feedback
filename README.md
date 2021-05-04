@@ -56,7 +56,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Continuous integration|-|
 |Production monitoring|-|
 |Acceptance tests|DataAnalysis/test_data_analysis.py [line 16]|
-|Event collaboration messaging|DataPersistence/db.py AND DataAnalysis/data_analysis.py|
+|Event collaboration messaging|DataPersistence/db.py <br /> DataAnalysis/data_analysis.py|
 |Continuous delivery|-|
 
 
