@@ -41,6 +41,26 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Monitoring|Heroku|
 |Continuous Delivery|Heroku|
 
+|Rubric Requirement|Location|
+|:---|:---|
+|Web application|-|
+|Data collection|DataPersistence/<multiple files>|
+|Batch worker|DataPersistence/Survey.py|
+|Data analyzer|-|
+|Unit tests|-|
+|Data persistence|DataPersistence/db.py|
+|Rest collaboration internal or API endpoint|-|
+|Product environment|-|
+|Integration tests|-|
+|Using mock objects or any test doubles|-|
+|Continuous integration|-|
+|Production monitoring|-|
+|Acceptance tests|-|
+|Event collaboration messaging|DataPersistence/db.py AND DataAnalysis/data_analysis.py|
+|Continuous delivery|-|
+
+
+
 ### Deployment Process
 
 The web application is written in Python using `flask` and deployed on Heroku.
