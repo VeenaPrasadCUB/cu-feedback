@@ -56,7 +56,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Continuous integration|https://github.com/jay-ml/cu-feedback/actions|
 |Production monitoring|-|
 |Acceptance tests|DataAnalysis/test_data_analysis.py [line 17]|
-|Event collaboration messaging|DataPersistence/db.py <br /> DataAnalysis/data_analysis.py|
+|Event collaboration messaging|DataPersistence/MessageProducer.py AND MessageConsumer.py|
 |Continuous delivery|https://github.com/jay-ml/cu-feedback/actions|
 
 
