@@ -24,6 +24,9 @@ jobs:
 
       - name: Installing requirements
         run: pip install -r requirements.txt
+      
+      - name: get sample_data.csv
+        run: git clone https://github.com/Pradyoth/FOS-Project.git
       - name: Verify DataAnalysisTests
         run: python DataAnalysis/test_data_analysis.py
         
