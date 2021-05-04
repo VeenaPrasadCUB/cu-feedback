@@ -47,13 +47,13 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
 |Data analyzer|-|
-|Unit tests|node_modules/|
+|Unit tests|templates/index.test.js|
 |Data persistence|DataPersistence/db.py|
 |Rest collaboration internal or API endpoint|-|
 |Product environment|-|
 |Integration tests|-|
 |Using mock objects or any test doubles|-|
-|Continuous integration|-|
+|Continuous integration|gradlew <br /> build.gradle <br /> setup.py <br /> setup.cfg <br />settings.gradle |
 |Production monitoring|-|
 |Acceptance tests|-|
 |Event collaboration messaging|DataPersistence/db.py AND DataAnalysis/data_analysis.py|
