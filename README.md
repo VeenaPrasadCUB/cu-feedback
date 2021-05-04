@@ -25,6 +25,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |:---|:---:|
 |User stories | https://www.pivotaltracker.com/n/projects/2491532 |
 |Production software | http://cu-feedback.herokuapp.com/ |
+|Project Demo | https://github.com/jay-ml/cu-feedback/blob/master/Demo%20of%20our%20project.mp4 | 
 
 |Topic|Topic|
 |:---|:---|
