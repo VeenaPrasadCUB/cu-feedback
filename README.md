@@ -47,17 +47,17 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
 |Data analyzer|-|
-|Unit tests|templates/index.test.js|
+|Unit tests|node_modules/ <br /> DataAnalysis/test_data_analysis.py[line 10] |
 |Data persistence|DataPersistence/db.py|
 |Rest collaboration internal or API endpoint|-|
 |Product environment|-|
-|Integration tests|-|
-|Using mock objects or any test doubles|-|
-|Continuous integration|https://github.com/jay-ml/cu-feedback/actions |
+|Integration tests|DataAnalysis/test_data_analysis.py [line 49]|
+|Using mock objects or any test doubles|DataAnalysis/test_data_analysis.py [line 28]|
+|Continuous integration|-|
 |Production monitoring|-|
-|Acceptance tests|-|
+|Acceptance tests|DataAnalysis/test_data_analysis.py [line 16]|
 |Event collaboration messaging|DataPersistence/db.py AND DataAnalysis/data_analysis.py|
-|Continuous delivery|https://github.com/jay-ml/cu-feedback/actions|
+|Continuous delivery|-|
 
 
 
@@ -95,3 +95,5 @@ Project Presentation slides can be found [here](https://github.com/jay-ml/cu-fee
 
 ### Demo of our project
 You can find our project demo [here](https://github.com/jay-ml/cu-feedback/blob/master/Demo%20of%20our%20project.mp4)
+
+
