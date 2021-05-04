@@ -22,8 +22,8 @@ jobs:
 
       - uses: actions/checkout@v1
 
-      - name: Verify 3.7
-        run: python test/test_example.py
+      - name: Installing requirements
+        run: npm install nltk
       - name: Verify DataAnalysisTests
         run: python DataAnalysis/test_data_analysis.py
         
