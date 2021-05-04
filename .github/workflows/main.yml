@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Installing requirements
-        run: pip3 install requirements.txt
+        run: pip install requirements.txt
       - name: Verify DataAnalysisTests
         run: python DataAnalysis/test_data_analysis.py
         
