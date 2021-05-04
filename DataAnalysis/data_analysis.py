@@ -31,7 +31,7 @@ def populate_dictionary(scores_aggregate):
 
 
 def calculate_scores():
-  input_data = read_data('sample_data.csv')
+  input_data = read_data('FOS-Project/sample_data.csv')
   array_scores = input_data['How comfortable are you working with arrays?']
   pointer_scores = input_data['How comfortable are you working with pointers?']
   linked_list_scores = input_data['How comfortable are you working with Linked Lists?']

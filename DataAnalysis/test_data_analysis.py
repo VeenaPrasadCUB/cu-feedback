@@ -42,13 +42,13 @@ class TestStringMethods(unittest.TestCase):
         data['How would you rate your TA?'] = np.random.choice(response_values, num_responses)
         data['If you could improve one thing about Recitation, what would it be?'] = np.random.choice(sample_comments, num_responses)
         mocked_obj.return_value = data
-        input_data = pd.read_csv('sample_data.csv')
+        input_data = pd.read_csv('FOS-Project/sample_data.csv')
         input_data = input_data.fillna('.')
-        self.assertEqual(read_data('sample_data.csv')['How would you rate your TA?'][0], input_data['How would you rate your TA?'][0])
+        self.assertEqual(read_data('FOS-Project/sample_data.csv')['How would you rate your TA?'][0], input_data['How would you rate your TA?'][0])
 
     #integration test to check read_data and populate_dictionary modules are integrated correctly.
     def test_integration(self):
-        input_data = read_data('sample_data.csv')
+        input_data = read_data('FOS-Project/sample_data.csv')
         array_scores = input_data['How comfortable are you working with arrays?']
         array_scores_aggregate = Counter(array_scores)
         expected_array_scores_aggregate = Counter({5: 14, 4: 8, 3: 6})
