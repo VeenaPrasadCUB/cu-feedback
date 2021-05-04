@@ -49,7 +49,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Data analyzer|DataAnalysis/<multiple files>|
 |Unit tests|node_modules/ <br /> DataAnalysis/test_data_analysis.py [line 11] |
 |Data persistence|DataPersistence/db.py|
-|Rest collaboration internal or API endpoint|-|
+|Rest collaboration internal or API endpoint|http://cu-feedback.herokuapp.com/kibana <br /> http://cu-feedback.herokuapp.com/|
 |Product environment|-|
 |Integration tests|DataAnalysis/test_data_analysis.py [line 50]|
 |Using mock objects or any test doubles|DataAnalysis/test_data_analysis.py [line 30]|
