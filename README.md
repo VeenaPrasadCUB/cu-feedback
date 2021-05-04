@@ -43,7 +43,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 
 |Rubric Requirement|Location|
 |:---|:---|
-|Web application|templates/ <br /> static/|
+|Web application|http://cu-feedback.herokuapp.com/  <br /> templates/ <br /> static/|
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
 |Data analyzer|DataAnalysis/<multiple files>|
