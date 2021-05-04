@@ -3,11 +3,8 @@ import pandas as pd
 from collections import Counter
 from nltk.sentiment import SentimentIntensityAnalyzer
 from elasticsearch import Elasticsearch
-from kafka import KafkaConsumer
 
 sia = SentimentIntensityAnalyzer()
-consumer = KafkaConsumer('database')
-
 
 def compute_sentiment(review_text: str):
     sentiment = ''
@@ -20,16 +17,10 @@ def compute_sentiment(review_text: str):
         sentiment = 'positive'
     return sentiment
 
-
-# For the MVP, data is pulled from a sample .csv file
-# For actual implementation, it pulls this data from the database - Kafka used to ensure connection can be made
 def read_data(filename):
-    for message in consumer:
-        print(message)
     input_data = pd.read_csv(filename)
     input_data = input_data.fillna('.')
     return input_data
-
 
 def populate_dictionary(scores_aggregate):
     s = set({1, 2, 3, 4, 5})

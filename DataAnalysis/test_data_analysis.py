@@ -1,15 +1,9 @@
-# coding=utf-8
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 import unittest
 from data_analysis import *
 from unittest.mock import patch
 from collections import Counter
 import pandas as pd
 import numpy as np
-
 
 class TestStringMethods(unittest.TestCase):
 
@@ -35,7 +29,6 @@ class TestStringMethods(unittest.TestCase):
     
     @patch('data_analysis.read_data')
     def test_calculate_scores_using_mock(self, mocked_obj):
-        
         data = pd.DataFrame()
         num_responses = 10
         sample_comments = ['no comment, good job','more examples please','slow down, we cannot keep up',
@@ -52,7 +45,6 @@ class TestStringMethods(unittest.TestCase):
         input_data = pd.read_csv('sample_data.csv')
         input_data = input_data.fillna('.')
         self.assertEqual(read_data('sample_data.csv')['How would you rate your TA?'][0], input_data['How would you rate your TA?'][0])
-
 
     #integration test to check read_data and populate_dictionary modules are integrated correctly.
     def test_integration(self):
