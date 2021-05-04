@@ -43,21 +43,21 @@ By seeing these results at regular intervals throughout the semester, our depart
 
 |Rubric Requirement|Location|
 |:---|:---|
-|Web application|templates/ <br /> static/|
+|Web application|http://cu-feedback.herokuapp.com/  <br /> templates/ <br /> static/|
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
-|Data analyzer|-|
-|Unit tests|node_modules/ <br /> DataAnalysis/test_data_analysis.py [line 11] |
+|Data analyzer|DataAnalysis/<multiple files>|
+|Unit tests|templates/index.test.js/ <br /> DataAnalysis/test_data_analysis.py [line 11] |
 |Data persistence|DataPersistence/db.py|
-|Rest collaboration internal or API endpoint|-|
+|Rest collaboration internal or API endpoint|http://cu-feedback.herokuapp.com/kibana <br /> http://cu-feedback.herokuapp.com/|
 |Product environment|-|
 |Integration tests|DataAnalysis/test_data_analysis.py [line 50]|
 |Using mock objects or any test doubles|DataAnalysis/test_data_analysis.py [line 30]|
-|Continuous integration|-|
+|Continuous integration|https://github.com/jay-ml/cu-feedback/actions|
 |Production monitoring|-|
 |Acceptance tests|DataAnalysis/test_data_analysis.py [line 17]|
 |Event collaboration messaging|DataPersistence/db.py <br /> DataAnalysis/data_analysis.py|
-|Continuous delivery|-|
+|Continuous delivery|https://github.com/jay-ml/cu-feedback/actions|
 
 
 
