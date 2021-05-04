@@ -46,7 +46,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Web application|templates/ <br /> static/|
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
-|Data analyzer|-|
+|Data analyzer|DataAnalysis/<multiple files>|
 |Unit tests|node_modules/ <br /> DataAnalysis/test_data_analysis.py [line 11] |
 |Data persistence|DataPersistence/db.py|
 |Rest collaboration internal or API endpoint|-|
