@@ -3,6 +3,7 @@ import pandas as pd
 from collections import Counter
 from nltk.sentiment import SentimentIntensityAnalyzer
 from elasticsearch import Elasticsearch
+nltk.download('vader_lexicon')
 
 sia = SentimentIntensityAnalyzer()
 
