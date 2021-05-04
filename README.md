@@ -55,7 +55,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Integration tests|DataAnalysis/test_data_analysis.py [line 50]|
 |Using mock objects or any test doubles|DataAnalysis/test_data_analysis.py [line 30]|
 |Continuous integration|https://github.com/jay-ml/cu-feedback/actions|
-|Production monitoring|Heroku metrics|
+|Production monitoring|Heroku metrics <br /> Kibana monitoring metrics <br /> Elastic Search monitoring metrics|
 |Acceptance tests|DataAnalysis/test_data_analysis.py [line 17]|
 |Event collaboration messaging|DataPersistence/MessageProducer.py <br /> MessageConsumer.py|
 |Continuous delivery| https://github.com/jay-ml/cu-feedback/blob/master/Cu-feedback%20production%20environment.png  <br /> https://github.com/jay-ml/cu-feedback/actions|
