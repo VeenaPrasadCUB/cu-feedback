@@ -47,15 +47,15 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
 |Data analyzer|-|
-|Unit tests|node_modules/ <br /> DataAnalysis/test_data_analysis.py[line 10] |
+|Unit tests|node_modules/ <br /> DataAnalysis/test_data_analysis.py [line 11] |
 |Data persistence|DataPersistence/db.py|
 |Rest collaboration internal or API endpoint|-|
 |Product environment|-|
-|Integration tests|DataAnalysis/test_data_analysis.py [line 49]|
-|Using mock objects or any test doubles|DataAnalysis/test_data_analysis.py [line 28]|
+|Integration tests|DataAnalysis/test_data_analysis.py [line 50]|
+|Using mock objects or any test doubles|DataAnalysis/test_data_analysis.py [line 30]|
 |Continuous integration|-|
 |Production monitoring|-|
-|Acceptance tests|DataAnalysis/test_data_analysis.py [line 16]|
+|Acceptance tests|DataAnalysis/test_data_analysis.py [line 17]|
 |Event collaboration messaging|DataPersistence/db.py <br /> DataAnalysis/data_analysis.py|
 |Continuous delivery|-|
 
