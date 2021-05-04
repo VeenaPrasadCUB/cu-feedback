@@ -1,14 +1,15 @@
 from __future__ import print_function
 
-import random
-import sqlite3
-
 import pandas as pd
 import numpy as np
 from download_sheet_to_csv import download_sheet_to_csv
 from get_api_services import get_api_services
 from get_spreadsheet_id import get_spreadsheet_id
 
+from db import Database
+
+db = Database()
+db.start_db()
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 csv_name = "sample_data.csv"
@@ -20,7 +21,7 @@ sample_comments = ['no comment, good job','more examples please','slow down, we 
 
 def simulate_survey():
     conn = connect_to_db()
-    data = pd.Dataframe()
+    data = pd.DataFrame()
     num_responses = 25
     response_values = [1, 2, 3, 4, 5]
     data['timestamp'] = np.random.choice(['', ''], num_responses)
@@ -40,13 +41,8 @@ def simulate_survey():
 
 
 def connect_to_db():
-    conn = None
-    try:
-        conn = sqlite3.connect('raw_data.db')
-    except Exception as e:
-        print(e)
-
-    return conn
+    started = db.start_db()
+    return started
 
 
 def download_spreadsheet_as_csv(spreadsheet_name):
@@ -60,9 +56,4 @@ def download_spreadsheet_as_csv(spreadsheet_name):
 
 def import_data():
     df = pd.read_csv("Form Responses 1.csv")
-    columns = df.columns
-    topic1 = columns[3].split(' ')[-2]
-    topic2 = columns[4].split(' ')[-2]
-    topic3 = columns[5].split(' ')[-2]
-    # I'll finish the rest later, when I complete the unit tests. This functionality is
-    # not necessary for the demo.
+    df.to_sql()

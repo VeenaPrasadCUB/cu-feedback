@@ -1,32 +1,33 @@
 import sqlite3
-from kafka import KafkaProducer
-
-# Kafka Producer to send database connection details
-producer = KafkaProducer()
 
 
-def get_db():
-    conn = sqlite3.connect('./raw_data.db')
-    try:
-        conn.cursor()
-        producer.send('database', b'Connection Successful')
-        return conn
-    except Exception as ex:
-        producer.send('database', b'Connection Failed')
-    return None
+class Database:
+    conn = None
 
+    def start_db(self):
+        self.conn = sqlite3.connect('./raw_data.db')
+        if self.conn:
+            return True
+        else:
+            return False
 
-def close_db():
-    db = get_db()
-    db.close()
-    producer.send('database', b'Connection Terminated')
-    return
+    def get_db(self):
+        if not self.conn:
+            self.conn = sqlite3.connect('./raw_data.db')
+        try:
+            self.conn.cursor()
+            return self.conn
+        except Exception as ex:
+            return None
 
+    def close_db(self):
+        self.conn.close()
+        self.conn = None
+        return
 
-def test_connection(conn):
-    try:
-        conn.cursor()
-        producer.send('database', b'Connection Successful')
-    except Exception as ex:
-        producer.send('database', b'Connection Failed')
-
+    def test_connection(self):
+        try:
+            self.conn.cursor()
+            return True
+        except Exception as ex:
+            return False
