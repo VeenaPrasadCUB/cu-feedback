@@ -47,7 +47,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Data collection|DataPersistence/<multiple files>|
 |Batch worker|DataPersistence/Survey.py|
 |Data analyzer|-|
-|Unit tests|-|
+|Unit tests|node_modules/|
 |Data persistence|DataPersistence/db.py|
 |Rest collaboration internal or API endpoint|-|
 |Product environment|-|
