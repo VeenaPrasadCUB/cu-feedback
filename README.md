@@ -53,11 +53,11 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Product environment|-|
 |Integration tests|-|
 |Using mock objects or any test doubles|-|
-|Continuous integration|gradlew <br /> build.gradle <br /> setup.py <br /> setup.cfg <br />settings.gradle |
+|Continuous integration|https://github.com/jay-ml/cu-feedback/actions |
 |Production monitoring|-|
 |Acceptance tests|-|
 |Event collaboration messaging|DataPersistence/db.py AND DataAnalysis/data_analysis.py|
-|Continuous delivery|-|
+|Continuous delivery|https://github.com/jay-ml/cu-feedback/actions|
 
 
 
