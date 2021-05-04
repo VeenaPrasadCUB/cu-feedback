@@ -1,4 +1,4 @@
-### Open Source Python Google Drive API via Github ###
+### Open Source Python Google Drive API via Github - Modified for this project###
 
 from googleapiclient import errors
 
