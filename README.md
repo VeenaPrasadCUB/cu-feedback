@@ -57,7 +57,7 @@ By seeing these results at regular intervals throughout the semester, our depart
 |Production monitoring|Heroku metrics|
 |Acceptance tests|DataAnalysis/test_data_analysis.py [line 17]|
 |Event collaboration messaging|DataPersistence/MessageProducer.py <br /> MessageConsumer.py|
-|Continuous delivery|https://github.com/jay-ml/cu-feedback/actions|
+|Continuous delivery| https://github.com/jay-ml/cu-feedback/blob/master/Cu-feedback%20production%20environment.png  <br /> https://github.com/jay-ml/cu-feedback/actions|
 
 
 
